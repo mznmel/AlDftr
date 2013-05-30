@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <title>Aldftr v0.1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='foundation.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+</head>
+<body>
+{% block body %}{% endblock %}
+
+<div class="row" id="footer">
+    <div class="small-4 columns">
+    <ul class="inline-list">
+        <li><a href="{{ url_for('index') }}">الرئيسية</a></li>
+        <li><a href="{{ url_for('all_pages') }}">كل الصفحات</a></li>
+        {% if endpoint != "index" and endpoint != "edit" %}
+        <li><a href="{{ url_for('edit', page_name = page_name) }}">تعديل</a></li>
+        {% endif %}
+
+    </ul>
+    </div>
+    <div class="small-7 columns align-center">
+        AlDftr v{{__version__}}
+    </div>
+    <div class="small-1 columns align-left">
+        {% if endpoint != "all_pages" %}
+        <a href="{{ url_for('delete', page_name = page_name) }}">حذف</a>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

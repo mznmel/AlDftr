@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="row {% if page_metadata.ltr %}ltr{% endif %}">
+    <div class="small-12 columns">
+        <h1 class="page_name">{{ page_name|capitalize }}</h1>
+        <div class="page_content">
+            {{ page_content|dftr|safe }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

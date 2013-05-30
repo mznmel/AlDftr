@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="row">
+    <div class="small-12 columns">
+        <h1>All Pages</h1>
+        <ul id="pages-list">
+            {% for page in pages %}
+            <li><a href="./view/{{ page[0:-4] }}">{{ page[0:-4] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
