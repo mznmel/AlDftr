@@ -16,6 +16,7 @@ You can download the windows release from [here](http://aldftr.com/bin-dist/win/
 
 
 
+
 Feedback
 ========
 You have a question? a note? a suggestion? a critic? You can send it in  our dev group on googlegroups: [aldfter dev group](https://groups.google.com/d/forum/aldftr "dev group").
@@ -28,4 +29,8 @@ Contact
 =======
 You can either contact the author **Mazen A. Melibari** via [contact info](http://mazen.ws/contact) or use the [mailing list](https://groups.google.com/d/forum/aldftr).
 
+Preview 
+=======
+![screenshot 1](http://aldftr.com/static/screenshots/aldftr-v0.1-index.png "Main page")
 
+![screenshot 2](http://aldftr.com/static/screenshots/aldftr-v0.1-edit-page.png "Edit page")
