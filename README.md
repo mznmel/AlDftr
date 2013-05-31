@@ -7,7 +7,7 @@ A simple tool that helps the user to organize his notes and ideas using a wiki-b
  - **License:** MPL
  - **Mailing list:** aldftr@googlegroups.com
  - **Website:** [aldftr.com](http://aldftr.com/ "website")
- - **Contibutors**: 
+ - **Contributors**: 
     - Saif Al-Harthi [@SaifAlHarthi](https://github.com/DevSalharthi)
     - Assem Chelli [@assem_ch](https://github.com/assem-ch)
  
