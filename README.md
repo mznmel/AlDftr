@@ -7,15 +7,14 @@ A simple tool that helps the user to organize his notes and ideas using a wiki-b
  - **License:** MPL
  - **Mailing list:** aldftr@googlegroups.com
  - **Website:** [aldftr.com](http://aldftr.com/ "website")
- - **Contibutors**: see Contributors #TODO#.
+ - **Contibutors**: 
+    - Saif Al-Harthi [@SaifAlHarthi](https://github.com/DevSalharthi)
+    - Assem Chelli [@assem_ch](https://github.com/assem-ch)
  
 
 Install
 =======
 You can download the windows release from [here](http://aldftr.com/bin-dist/win/AlDftr-win-0.1.zip "windows release"). After downloading, you will get a zipped file. Extract it somewhere in your computer then execute the file: *AlDftr*. To use the tool, Open your browser and type the link *http://localhost:8001*.
-
-
-
 
 Feedback
 ========
