@@ -17,7 +17,6 @@ import webbrowser
 LOCAL_SERVER_PORT = 8001
 ROOT_FOLDER = os.path.dirname(sys.argv[0])
 DATA_FOLDER = unicode(os.path.join(ROOT_FOLDER, '../data')) # use unicode so that os.listdir() returns filenames in unicode!
-print(DATA_FOLDER)
 METADATA_SEPARATOR = '#####-----|+|-|-|+|-----#####' # new lines added before and after the separator
 
 
@@ -35,14 +34,16 @@ class AlDftr:
         """
         # replace any nonalphanumeric(english and arabic) char or '_' by a dash
         #r'[^0-9a-zA-Z\u0600-\u06FF\_]+',
-        regexp = re.compile(r'[^\w\d]+', re.UNICODE)
+        regexp = re.compile(r'[^\w\d\:]+', re.UNICODE)
         return regexp.sub('-', page_name)
 
     def get_file_path(self, page_name):
         """
         Returns the full path of the page file
         """
-        file_path = os.path.join(self.data_folder, '%s.txt' % page_name)
+        page_path_parts = page_name.split(':')
+        page_path_parts[-1] = page_path_parts[-1] + '.txt'
+        file_path = os.path.join(self.data_folder, *page_path_parts)
         return file_path
 
     def get_page(self, page_name):
@@ -59,6 +60,11 @@ class AlDftr:
 
     def save_page(self, page_name, page_content, page_metadata):
         file_path = self.get_file_path(page_name)
+
+        #create namespace if not existed
+        if not self.is_namespace_exists(file_path):
+            os.makedirs(os.path.dirname(file_path))
+
         # append metadata to the end of the page
         file_content = page_content + '\n' + self.metadata_separator + '\n' + page_metadata
         with codecs.open(file_path, 'w', 'utf-8-sig') as file:
@@ -71,6 +77,10 @@ class AlDftr:
     def is_page_exists(self, page_name):
         file_path = self.get_file_path(page_name)
         return os.path.exists(file_path)
+
+    def is_namespace_exists(self, page_full_path):
+        namespace_path = os.path.dirname(page_full_path)
+        return os.path.exists(namespace_path)
 
     def get_all_pages(self):
         return os.listdir(self.data_folder)
@@ -224,6 +234,7 @@ if __name__ == '__main__':
     print("Aldftr v%s" % __version__)
     print("Please keep this window open as long as you want to access AlDftr")
     print("#"*50)
-    #app.debug = True
+
+    app.debug = True
     webbrowser.open("http://localhost:8001")
     app.run(port=LOCAL_SERVER_PORT)
