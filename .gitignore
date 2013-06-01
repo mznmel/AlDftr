@@ -1,5 +1,8 @@
 PyAlDftr/build/
+GoAlDftr/build/
 
 .idea/
 *.iml
 *.iws
+
+*.pyc
