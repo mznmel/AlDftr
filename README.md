@@ -3,18 +3,22 @@ AlDftr
 A simple tool that helps the user to organize his notes and ideas using a wiki-based method. The tool still in Beta testing phase. 
 
  - **Author:** Mazen A. Melibari [@mkhDev](https://github.com/mkhDev) 
- - **Version:** 0.1
+ - **Version:** 0.2
  - **License:** MPL
  - **Mailing list:** aldftr@googlegroups.com
  - **Website:** [aldftr.com](http://aldftr.com/ "website")
  - **Contributors**: 
     - Saif Al-Harthi [@SaifAlHarthi](https://github.com/DevSalharthi)
     - Assem Chelli [@assem_ch](https://github.com/assem-ch)
+    - AnasAmoudi [@anasamoudi](https://github.com/anasamoudi)
  
 
 Install
 =======
-You can download the windows release from [here](http://aldftr.com/bin-dist/win/AlDftr-win-0.1.zip "windows release"). After downloading, you will get a zipped file. Extract it somewhere in your computer then execute the file: *AlDftr*. To use the tool, Open your browser and type the link *http://localhost:8001*.
+Windows release can be downloaded from [http://aldftr.com/bin-dist/0.2/AlDftr-win-0.2.zip](http://aldftr.com/bin-dist/0.2/AlDftr-win-0.2.zip "windows release").
+Mac release is available  here: [http://aldftr.com/bin-dist/0.2/AlDftr-mac-0.2.zip](http://aldftr.com/bin-dist/0.2/AlDftr-mac-0.2.zip "mac release").
+
+After downloading, you will get a zipped file. Extract it somewhere in your computer then execute the file: *AlDftr*. To use the tool, Open your browser and type the link *http://localhost:5000*.
 
 Feedback
 ========
