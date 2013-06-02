@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <title>Aldftr v0.1</title>
+    <link rel="stylesheet" href="../static/normalize.css">
+    <link rel="stylesheet" href="../static/foundation.min.css">
+    <link rel="stylesheet" href="../static/main.css">
+    <script src="../static/jquery.min.js"></script>
+</head>
+<body>
+{{ .Body }}
+
+<div class="row" id="footer">
+    <div class="small-4 columns">
+        <ul class="inline-list">
+            <li><a href="../view/main">الرئيسية</a></li>
+            <li><a href="../all_pages/">كل الصفحات</a></li>
+            <li><a href="../edit/{{ .page_name }}">تعديل</a></li>
+        </ul>
+    </div>
+    <div class="small-7 columns align-center">
+        AlDftr v{{ .__VERSION__ }}
+    </div>
+    <div class="small-1 columns align-left">
+        {{ if .page_name }}
+        <a href="../delete/{{ .page_name }}">حذف</a>
+        {{ end }}
+    </div>
+</div>
+</body>
+</html>
